@@ -19,7 +19,7 @@
 </form>
 
 
-<p id="result">This result will be replaced </p>
+<p id="result">This result will be displayed!!</p>
     <script> 
         var correct = 0;
         var wrong = 0;
@@ -28,14 +28,16 @@
         console.log("Getting form values")
         Secret_Phrase = document.getElementById("Secret_Phrase").value
         Enter_Phrase = document.getElementById("Enter_Phrase").value
-        confirmed = confirm("Are these the values? "+Secret_Phrase+" and "+Enter_Phrase)    
+        confirmed = confirm("Check the values? "+Secret_Phrase+" and "+Enter_Phrase)    
         out = document.getElementById("result")
         if(Secret_Phrase == Enter_Phrase){
-            correct = correct+1
-            out.innerHTML = "Access allowed"
+            correct = correct+1;
+            alert("Access allowed!!");
+            out.innerHTML = "Correct count : "+correct;
         } else {
             wrong = wrong + 1
-            out.innerHTML = "Access denied"
+            alert("Access denied!!");
+            out.innerHTML = "Wrong count : "+wrong;
         }
     }
     </script>
