@@ -12,11 +12,11 @@
     <br>
 
     <label for="ac">AC </label>
-    <input type ="checkbox" id="ac" name="ac" autofocus> 
+    <input type ="checkbox" id="ac" name="ac"> 
     <br>
 
     <label for="gps">GPS</label>
-    <input type ="checkbox" id="gps" name="gps" autofocus> 
+    <input type ="checkbox" id="gps" name="gps"> 
     <br>
 
     <input type="button" onclick="orderCar()" value="Order a car">
@@ -25,7 +25,6 @@
 
 <script> 
     var my_car={}
-    out= document.getElementById("result")
     function OrderCar(){
         console.log("Getting form values");
         if (document.getElementById("electric").checked) {
@@ -43,9 +42,8 @@
         } else {
             gps = "false";
         }
-        my_car = "The car is " + electric + " has " + ac + " has " + gps;
-        out = document.getElementById("result");
-        out.innerHTML = my_car;
+        my_car = document.getElementById("result");
+        my_car.innerHTML = "The car is " + electric + " has " + ac + " has " + gps;
         }
 </script>
 
@@ -58,7 +56,7 @@
     <br>
     <input type="button" onclick="updateCar()" value="Update the car" />
 </form>
-<p id="result2">Results </p>
+<p id="result2">View Property and value Results!!</p>
 
 <script>    
     function updateCar(){
