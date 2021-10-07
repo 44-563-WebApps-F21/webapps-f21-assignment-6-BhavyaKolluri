@@ -6,6 +6,19 @@
 <body>
 <h2>Pass phraseby BHAVYA KOLLURI</h2>
 
+<style>
+    .container {
+      position: relative;
+    }    
+    .bottomleft {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+      font-size: 20px;
+      color:rgb(255, 251, 0);
+    }
+</style>
+
 <form>
     <label for="Secret_Phrase">Enter the secret phrase</label>
     <input type="password" id="Secret_Phrase" name="Secret_Phrase" value="Let me in" />
@@ -47,12 +60,13 @@
 
 <div class="container">
     <img id ="Kakapo" src="Kakapo.jpg" onclick="newImage()" height="200" weight="200">    
+    <div class="bottomleft">Fauna</div>
     <script>
         var usingImage=1;
         function newImage(){
             switch(usingImage){
                 case 1:                        
-                    var x=document.getElementById("Kakapo").src="Kakapo.jpg";                        
+                    var x=document.getElementById("Kakapo").src="Kakapo.jpg";                       
                     usingImage++;
                     break;
 
@@ -62,7 +76,7 @@
                     break;
 
                 case 3:
-                    var z=document.getElementById("Kakapo").src="Labmaraner.jpg";                        
+                    var z=document.getElementById("Kakapo").src="Labmaraner.jpg";                       
                     usingImage=1;
                     break;
             }
