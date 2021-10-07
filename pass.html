@@ -29,6 +29,7 @@
         Enter_Phrase = document.getElementById("Enter_Phrase").value
         confirmed = confirm("Check the values? "+Secret_Phrase+" and "+Enter_Phrase)    
         out = document.getElementById("result")
+        if (wrong<3){
         if(Secret_Phrase == Enter_Phrase){
             correct = correct+1;
             alert("Access allowed!!");
@@ -38,6 +39,9 @@
             alert("Access denied!!");
             out.innerHTML = "Correct count : "+correct + "<br>"+ "Wrong count : "+wrong;
         }
+        }else{
+            alert("Account Locked.");
+    }
     }
     </script>
 
